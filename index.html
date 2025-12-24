@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramètres Dapi - Coloration & Organigramme</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Paramètres Dapi</h1>
+  <!-- Group: Instructions Simples -->
+  <div class="group-header">
+    <h2 class="group-title">Instructions simples</h2>
+    <hr>
+  </div>
+
+  <!-- Zone Instructions de base -->
+  <section class="param-section" id="instructions">
+    <h2>🔹 Instructions de base</h2>
+    <div class="keywords" id="keywords-instructions"></div>
+    <div class="zone-controls">
+      <label for="color-instructions" class="visually-hidden">Couleur</label>
+      <input type="color" id="color-instructions" value="#d35400" aria-label="Couleur instructions">
+      <select id="shape-instructions" aria-label="Forme instructions">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-instructions" aria-label="Palette instructions">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="instructions" aria-label="Ajouter mot-clé instructions" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-instructions-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-instructions">
+      <button id="add-instructions-btn">Ajouter</button>
+    </div>
+  </section>
+
+  <!-- Zone Conditions -->
+  <div class="group-header">
+    <h2 class="group-title">Instructions composées</h2>
+    <hr>
+  </div>
+
+  <section class="param-section" id="conditions">
+    <h2>🔸 Conditions</h2>
+    <div class="keywords" id="keywords-conditions"></div>
+    <div class="zone-controls">
+      <input type="color" id="color-conditions" value="#2980b9" aria-label="Couleur conditions">
+      <select id="shape-conditions" aria-label="Forme conditions">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-conditions" aria-label="Palette conditions">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="conditions" aria-label="Ajouter mot-clé conditions" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-conditions-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-conditions">
+      <button id="add-conditions-btn">Ajouter</button>
+    </div>
+
+    <h2>🔸 Boucles</h2>
+    <div class="keywords" id="keywords-boucles"></div>
+    <div class="zone-controls">
+      <input type="color" id="color-boucles" value="#27ae60" aria-label="Couleur boucles">
+      <select id="shape-boucles" aria-label="Forme boucles">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-boucles" aria-label="Palette boucles">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="boucles" aria-label="Ajouter mot-clé boucles" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-boucles-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-boucles">
+      <button id="add-boucles-btn">Ajouter</button>
+    </div>
+
+    <h2>🔸 Comparaisons</h2>
+    <div class="keywords" id="keywords-comparaisons"></div>
+    <div class="zone-controls">
+      <input type="color" id="color-comparaisons" value="#8e44ad" aria-label="Couleur comparaisons">
+      <select id="shape-comparaisons" aria-label="Forme comparaisons">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-comparaisons" aria-label="Palette comparaisons">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="comparaisons" aria-label="Ajouter mot-clé comparaisons" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-comparaisons-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-comparaisons">
+      <button id="add-comparaisons-btn">Ajouter</button>
+    </div>
+  </section>
+
+  <!-- Fonctions -->
+  <section class="param-section" id="fonctions">
+    <h2>🔹 Fonctions</h2>
+    <div class="keywords" id="keywords-fonctions"></div>
+    <div class="zone-controls">
+      <input type="color" id="color-fonctions" value="#16a085" aria-label="Couleur fonctions">
+      <select id="shape-fonctions" aria-label="Forme fonctions">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-fonctions" aria-label="Palette fonctions">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="fonctions" aria-label="Ajouter mot-clé fonctions" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-fonctions-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-fonctions">
+      <button id="add-fonctions-btn">Ajouter</button>
+    </div>
+  </section>
+
+  <!-- Procedures -->
+  <section class="param-section" id="procedures">
+    <h2>🔹 Procédures</h2>
+    <div class="keywords" id="keywords-procedures"></div>
+    <div class="zone-controls">
+      <input type="color" id="color-procedures" value="#e67e22" aria-label="Couleur procedures">
+      <select id="shape-procedures" aria-label="Forme procedures">
+        <option value="rectangle">Rectangle</option>
+        <option value="losange">Losange</option>
+        <option value="hexagone">Hexagone</option>
+        <option value="ovale">Ovale</option>
+      </select>
+      <select id="palette-procedures" aria-label="Palette procedures">
+        <option value="standard">Palette standard</option>
+        <option value="vivid">Palette vive</option>
+      </select>
+      <button type="button" class="btn-add-toggle" data-zone="procedures" aria-label="Ajouter mot-clé procedures" title="Ajouter mot-clé">+</button>
+    </div>
+    <div class="add-keyword" id="add-procedures-section" style="display:none;">
+      <input type="text" placeholder="Nouveau mot-clé" id="input-procedures">
+      <button id="add-procedures-btn">Ajouter</button>
+    </div>
+  </section>
+
+  <!-- Code -->
+  <section class="param-section" id="exampleCode">
+    <h2>Exemple de code</h2>
+    <textarea id="codeInput" rows="10" placeholder="Écrivez votre code ici..." aria-label="Code input"></textarea>
+    <pre id="codeOutput" aria-live="polite" aria-atomic="true"></pre>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
