@@ -1,0 +1,158 @@
+
+:root{
+  --bg-1: #071428;
+  --bg-2: #0b2540;
+  --panel: rgba(10,20,40,0.7);
+  --muted: #9fb0d3;
+  --accent: #5dd0ff;
+  --accent-2: #9b7bff;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  margin: 0;
+  color: var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(3,8,20,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.param-section {
+  margin-bottom: 20px;
+}
+
+.param-section h2 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.group-header { display:flex; align-items:center; gap:12px; margin:18px 0 8px; }
+.group-title{ color: var(--accent-2); margin:0; font-size:18px }
+.group-header hr{ flex:1; border:none; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.06)); }
+
+.keywords span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin: 4px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 999px;
+  cursor: default;
+  position: relative;
+  color: var(--muted);
+  transition: transform .12s ease, background .18s ease;
+}
+
+.keywords span:hover { transform: translateY(-2px); background: rgba(255,255,255,0.04); }
+
+.keywords .remove {
+  background: #ff5a7a;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(155, 30, 60, .25);
+}
+
+.kw { display: inline-flex; align-items:center; gap:8px; }
+
+.zone-controls { margin-top:6px; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+
+.zone-controls select, .zone-controls input[type="color"]{ background: rgba(255,255,255,0.02); color:var(--muted); border: 1px solid rgba(255,255,255,0.04); padding:6px 8px; border-radius:8px; }
+
+.add-keyword {
+  margin-top: 5px;
+}
+
+#codeInput {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(0,0,0,0.6);
+  color: #e6f7ff;
+}
+
+#codeOutput {
+  background: linear-gradient(180deg,#05060a, #0e1116);
+  color: #e6f7ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  box-shadow: inset 0 -6px 18px rgba(80,150,255,0.02);
+}
+
+input, select {
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.btn {
+  padding: 8px 12px;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: #041226;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(85,160,255,0.08);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 28px rgba(95,170,255,0.12); }
+
+.btn-add-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--accent);
+  transition: transform .18s ease, background .18s ease;
+}
+.btn-add-toggle.open{ transform: rotate(90deg); background: linear-gradient(90deg,var(--accent-2),var(--accent)); color: #041226; }
+
+.glow-hover:hover{ box-shadow: 0 8px 30px rgba(93,208,255,0.08); }
+
+.btn-add-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .container { margin: 10px; padding: 12px; }
+  #codeInput, #codeOutput { font-size: 13px; }
+}
